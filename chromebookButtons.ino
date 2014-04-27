@@ -1,4 +1,3 @@
-
 // send a username and password when button is pressed
 var enrolButton = 2;
 var loginButton = 3;
