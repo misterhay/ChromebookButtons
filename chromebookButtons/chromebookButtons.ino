@@ -40,6 +40,16 @@ void enrol() {
   Keyboard.press('e');
   delay(50);
   Keyboard.releaseAll();
+  delay(3000);
+  Keyboard.print(email);
+  Keyboard.press(KEY_TAB); //tab to get to the password field
+  delay(50);
+  Keyboard.releaseAll();
+  Keyboard.print(password);
+  Keyboard.press(KEY_ENTER);
+  delay(50);
+  Keyboard.releaseAll();
+  
   Keyboard.end();
   digitalWrite(enrolLED, LOW);
   delay(1000);
@@ -58,4 +68,24 @@ void login() {
   Keyboard.end();
   digitalWrite(loginLED, LOW);
   delay(1000);
+  Keyboard.press(KEY_TAB);
+  delay(50);
+  Keyboard.releaseAll();
+  Keyboard.press(KEY_DOWN);
+  delay(50);
+  Keyboard.releaseAll();
+  Keyboard.press(KEY_TAB);
+  delay(50);
+  Keyboard.releaseAll();
+  Keyboard.press(KEY_TAB);
+  delay(50);
+  Keyboard.releaseAll();
+  Keyboard.press(KEY_ENTER);
+  delay(50);
+  Keyboard.releaseAll();
+  delay(5000);
+  Keyboard.press(KEY_SPACE);
+  delay(50);
+  Keyboard.releaseAll();
+
 }
