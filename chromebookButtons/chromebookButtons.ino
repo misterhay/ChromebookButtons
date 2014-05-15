@@ -1,7 +1,7 @@
 // send a email and password when button is pressed
 
 String email = "example@example.com";
-String password = "thisisaweakpassword";
+String password = "thisisaweakpassword@";
 const int enrolButton = 2;
 const int loginButton = 3;
 const int enrolLED = 11;
