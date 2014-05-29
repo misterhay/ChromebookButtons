@@ -1,28 +1,28 @@
 #include <TrinketKeyboard.h>
  
 int LED = 1;
-int button1 = 0;
-int button2 = 2;
+int redButton = 0;
+int blackButton = 2;
  
 void setup() {
-  pinMode(button1, INPUT_PULLUP); // button pins as inputs with internal pullup resistors
-  pinMode(button2, INPUT_PULLUP);
+  pinMode(redButton, INPUT_PULLUP); // button pins as inputs with internal pullup resistors
+  pinMode(blackButton, INPUT_PULLUP);
   TrinketKeyboard.begin(); // start USB keyboard
 }
 
-void firstButton() {
+void redButtonFunction() {
   TrinketKeyboard.pressKey(KEYCODE_MOD_LEFT_SHIFT, KEYCODE_A);
   TrinketKeyboard.pressKey(0, 0);
   delay(100);
 }
 
-void secondButton() {
+void blackButtonFunction() {
   TrinketKeyboard.print("Hello World!");
 }
 
 void loop() {
   TrinketKeyboard.poll(); // the poll function must be called at least once every 10 ms
   delay(5); // to help debounce the inputs
-  if (digitalRead(button1) == LOW) {firstButton();} // if pressed call the firstButton function
-  if (digitalRead(button2) == LOW) {secondButton();}
+  if (digitalRead(redButton) == LOW) {redButtonFunction();} // if pressed call the firstButton function
+  if (digitalRead(blackButton) == LOW) {blackButtonFunction();}
 }
